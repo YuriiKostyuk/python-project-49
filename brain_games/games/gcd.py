@@ -32,4 +32,4 @@ def gcd():
             print(f"Let's try again, {name}!")
             return
         print("Correc!")
-        print(f"Congratulations {name}!")
+    print(f"Congratulations {name}!")
