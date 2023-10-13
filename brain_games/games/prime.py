@@ -9,12 +9,12 @@ def is_prime():
         if (n % i == 0):
             k += 1
     if n < 2:
-        correct_answer = 'no'
+        corec = 'no'
     elif k <= 0:
-        correct_answer = 'yes'
+        corec = 'yes'
     else:
-        correct_answer = 'no'
-    return n, correct_answer
+        corec = 'no'
+    return n, corec
 
 
 def prime():
@@ -22,11 +22,11 @@ def prime():
     name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for _ in range(3):
-        n, correct_answer = is_prime()
+        n, corec = is_prime()
         print(f"Question: {n}")
-        user_answer = input("Your answer ")
-        if user_answer != correct_answer:
-            print(f'"{user_answer}" is wrong answer ;(. Correct answer was "{correct_answer}"')
+        user = input("Your answer ")
+        if user != corec:
+            print(f'"{user}" is wrong answer ;(. Correct answer was "{corec}"')
             print(f"Let's try again, {name}!")
             return
         print("Correct!")

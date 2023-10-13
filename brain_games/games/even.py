@@ -12,8 +12,8 @@ def is_even(number):  # Эта функция проверяет число на
 def generate_num():  # генерируем случайное число
     number = random.randint(1, 100)
     num = str(number)
-    correct_answer = "yes" if is_even(number) else "no"
-    return num, correct_answer
+    corect = "yes" if is_even(number) else "no"
+    return num, corect
 
 
 def even():
@@ -21,11 +21,11 @@ def even():
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for _ in range(3):  # 3 вопроса
-        num, correct_answer = generate_num()
+        num, corect = generate_num()
         print("Question:", num)
-        user_answer = input("Your answer: ")
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+        user = input("Your answer: ")
+        if user != corect:
+            print(f"'{user}' is wrong answer ;(. Correct answer was '{corect}'")
             print(f"Let's try again, {name}!")
             return
         print("Correct!")

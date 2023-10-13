@@ -11,8 +11,8 @@ def generate_num():
             num1 = num1 % num2
         else:
             num2 = num2 % num1
-    correct_answer = num1 + num2
-    return question, correct_answer
+    corec = num1 + num2
+    return question, corec
 
 
 def gcd():
@@ -20,11 +20,11 @@ def gcd():
     name = welcome_user()
     print("Find the greatest common divisor of given numbers.")
     for _ in range(3):
-        question, correct_answer = generate_num()
+        question, corec = generate_num()
         print(question)
-        user_answer = int(input("Your answer: "))
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+        user = int(input("Your answer: "))
+        if user != corec:
+            print(f"'{user}' is wrong answer ;(. Correct answer was '{corec}'.")
             print(f"Let's try again, {name}!")
             return
         print("Correct!")
