@@ -3,6 +3,7 @@
 
 from brain_games.games.prime import prime
 
+
 def main():
     prime()
 

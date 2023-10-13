@@ -5,10 +5,7 @@ from brain_games.cli import welcome_user
 def generate_num():
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
-
-
     question = f"Question: {num1} {num2}"
-
     while num1 != 0 and num2 != 0:
         if num1 > num2:
             num1 = num1 % num2
@@ -16,7 +13,6 @@ def generate_num():
             num2 = num2 % num1
     correct_answer = num1 + num2
     return question, correct_answer
-
 
 
 def gcd():
