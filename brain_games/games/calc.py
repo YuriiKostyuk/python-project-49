@@ -25,11 +25,11 @@ def calc():
     name = welcome_user()
     print("What is the result of the expression?")
     for _ in range(3):
-        question, correct_answer = generate_num()
+        question, corect = generate_num()
         print(question)
-        user_answer = int(input("Your answer: "))
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+        user = int(input("Your answer: "))
+        if user != corect:
+            print(f"'{user}' is wrong answer ;(. Correct answer was '{corect}'")
             print(f"Let's try again, {name}!")
             return
         print("Correct!")
