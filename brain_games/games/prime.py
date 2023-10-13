@@ -20,7 +20,7 @@ def is_prime():
 def prime():
     print("Welcome to the Brain Games!")
     name = welcome_user()
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no'.")
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for _ in range(3):
         n, correct_answer = is_prime()
         print(f"Question: {n}")
