@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user
 def generate_progression():
     start = random.randint(1, 10)  # Генерируем начало прогрессии
     step = random.randint(1, 10)  # Генерируем шаг прогрессии
-    lenght = random.randint(1, 10)  # Генерируем длину прогрессии
+    lenght = random.randint(5, 10)  # Генерируем длину прогрессии
     progression = [start + step * i for i in range(lenght)]  # Генерация прогрессии
     hidden_index = random.randint(0, lenght - 1)  # Выбор индекса числа, которое нужно скрыть
     correct_answer = str(progression[hidden_index])  # Верный ответ
