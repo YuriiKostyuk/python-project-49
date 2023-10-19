@@ -3,7 +3,6 @@ from brain_games.game_engine import play
 from brain_games.consts import DESCRIPTION_PRIME
 
 
-
 def game_prime():
     question = random.randint(1, 10)
     k = 0
