@@ -1,10 +1,9 @@
 import random
+from brain_games.game_engine import play
+from brain_games.consts import DESCRIPTION_PROGRESSION
 
 
-DESCRIPTION = 'What number is missing in the progression?'
-
-
-def generate_num():
+def game_progression():
     start = random.randint(1, 10)
     step = random.randint(1, 10)
     lenght = random.randint(5, 10)
@@ -14,3 +13,7 @@ def generate_num():
     progression[hidden_index] = '..'
     question = ' '.join(str(i) for i in progression)
     return question, str(right)
+
+
+def run_game_progression():
+    play(game_progression, DESCRIPTION_PROGRESSION)

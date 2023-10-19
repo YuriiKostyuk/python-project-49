@@ -1,14 +1,16 @@
 import prompt
-from brain_games.constants import ROUND_COUNT
 
 
-def play(game):
+ROUND_COUNT = 3
+
+
+def play(game, description):
     print('Welcome to thee Brain Games!')
     name = prompt.string('May i have your name?')
     print(f'Hello, {name}!')
-    print(game.DESCRIPTION)
+    print(description)
     for _ in range(ROUND_COUNT):
-        question, right = game.generate_num()
+        question, right = game()
         print(f'Question: {question}')
         user = prompt.string('Your answer: ')
         if user != right:

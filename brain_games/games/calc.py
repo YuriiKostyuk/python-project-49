@@ -1,10 +1,9 @@
 import random
+from brain_games.game_engine import play
+from brain_games.consts import DESCRIPTION_CALC
 
 
-DESCRIPTION = 'What is the result of the expression?'
-
-
-def generate_num():
+def game_calc():
     num1 = random.randint(1, 20)
     num2 = random.randint(1, 20)
     operator = random.choice(['+', '-', '*'])
@@ -19,3 +18,7 @@ def generate_num():
         right = num1 * num2
 
     return question, str(right)
+
+
+def run_game_calc():
+    play(game_calc, DESCRIPTION_CALC)

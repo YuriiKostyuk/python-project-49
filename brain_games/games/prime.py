@@ -1,10 +1,10 @@
 import random
+from brain_games.game_engine import play
+from brain_games.consts import DESCRIPTION_PRIME
 
 
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-
-def generate_num():
+def game_prime():
     question = random.randint(1, 10)
     k = 0
     for i in range(2, question // 2 + 1):
@@ -17,3 +17,7 @@ def generate_num():
     else:
         right = 'no'
     return question, str(right)
+
+
+def run_game_prime():
+    play(game_prime, DESCRIPTION_PRIME)
