@@ -4,7 +4,11 @@ from brain_games.consts import DESCRIPTION_PRIME
 
 
 def is_prime(number):
-    is_prime = 'yes' if number >= 2 and all(number % i != 0 for i in range(2, int(number ** 0.5) + 1)) else 'no'
+    is_prime = (
+        'yes' if number >= 2 and
+        all(number % i != 0 for i in range(2, int(number ** 0.5) + 1))
+        else 'no'
+    )
     return is_prime
 
 
