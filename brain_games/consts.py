@@ -6,3 +6,6 @@ DESCRIPTION_PRIME = (
     'Otherwise answer "no".'
 )
 DESCRIPTION_PROGRESSION = 'What number is missing in the progression?'
+
+
+ROUND_COUNT = 3

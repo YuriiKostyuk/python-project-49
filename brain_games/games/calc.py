@@ -1,6 +1,15 @@
 import random
-from brain_games.game_engine import play
+from brain_games.game import play
 from brain_games.consts import DESCRIPTION_CALC
+
+
+def is_calc(num1, num2, operator):
+    if operator == '+':
+        return num1 + num2
+    elif operator == '-':
+        return num1 - num2
+    else:
+        return num1 * num2
 
 
 def game_calc():
@@ -9,15 +18,9 @@ def game_calc():
     operator = random.choice(['+', '-', '*'])
 
     question = f"Question: {num1} {operator} {num2}"
+    correct_answer = is_calc(num1, num2, operator)
 
-    if operator == '+':
-        right = num1 + num2
-    elif operator == '-':
-        right = num1 - num2
-    else:
-        right = num1 * num2
-
-    return question, str(right)
+    return question, str(correct_answer)
 
 
 def run_game_calc():

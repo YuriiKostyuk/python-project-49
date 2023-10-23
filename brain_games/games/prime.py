@@ -1,21 +1,18 @@
 import random
-from brain_games.game_engine import play
+from brain_games.game import play
 from brain_games.consts import DESCRIPTION_PRIME
 
 
+def is_prime(number):
+    is_prime = 'yes' if number >= 2 and all(number % i != 0 for i in range(2, int(number ** 0.5) + 1)) else 'no'
+    return is_prime
+
+
 def game_prime():
-    question = random.randint(1, 10)
-    k = 0
-    for i in range(2, question // 2 + 1):
-        if (question % i == 0):
-            k += 1
-    if question < 2:
-        right = 'no'
-    elif k <= 0:
-        right = 'yes'
-    else:
-        right = 'no'
-    return question, str(right)
+    number = random.randint(1, 10)
+    question = number
+    correct_answer = is_prime(number)
+    return question, str(correct_answer)
 
 
 def run_game_prime():
