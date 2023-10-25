@@ -1,9 +1,9 @@
 import random
-from brain_games.game import play
+from brain_games.engine import play
 from brain_games.consts import DESCRIPTION_PRIME
 
 
-def is_prime(number):
+def perform_operation(number):
     if number < 2:
         return False
     for i in range(2, int(number ** 0.5 + 1)):
@@ -12,12 +12,12 @@ def is_prime(number):
     return True
 
 
-def game_prime():
+def play_calc_game():
     number = random.randint(1, 10)
     question = number
-    correct_answer = is_prime(number) and 'yes' or 'no'
+    correct_answer = perform_operation(number) and 'yes' or 'no'
     return question, str(correct_answer)
 
 
-def run_game_prime():
-    play(game_prime, DESCRIPTION_PRIME)
+def start_prime_game():
+    play(play_calc_game, DESCRIPTION_PRIME)

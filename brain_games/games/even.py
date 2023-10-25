@@ -1,18 +1,18 @@
 import random
-from brain_games.game import play
+from brain_games.engine import play
 from brain_games.consts import DESCRIPTION_EVEN
 
 
-def is_even(number):
+def perform_operation(number):
     return 'yes' if number % 2 == 0 else 'no'
 
 
-def game_even():
+def play_even_game():
     number = random.randint(1, 100)
     question = f'{number}'
-    correct_answer = is_even(number)
+    correct_answer = perform_operation(number)
     return question, str(correct_answer)
 
 
-def run_game_even():
-    play(game_even, DESCRIPTION_EVEN)
+def start_even_game():
+    play(play_even_game, DESCRIPTION_EVEN)

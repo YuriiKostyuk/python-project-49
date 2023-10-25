@@ -13,9 +13,8 @@ Hello, {name}!
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if user_answer != correct_answer:
-            print(f"""\
-'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.
-Let's try again, {name}!""")
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n"
+                  f"Let's try again, {name}!")
             return
         print('Correct!')
     else:
