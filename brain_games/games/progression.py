@@ -3,7 +3,7 @@ from brain_games.engine import play
 from brain_games.consts import DESCRIPTION_PROGRESSION
 
 
-def play_progression_game():
+def result_progression_game():
     start = random.randint(1, 10)
     step = random.randint(1, 10)
     lenght = random.randint(5, 10)
@@ -16,4 +16,4 @@ def play_progression_game():
 
 
 def start_progression_game():
-    play(play_progression_game, DESCRIPTION_PROGRESSION)
+    play(result_progression_game, DESCRIPTION_PROGRESSION)
