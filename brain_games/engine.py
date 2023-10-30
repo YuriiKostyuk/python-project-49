@@ -1,13 +1,13 @@
 import prompt
-from brain_games.consts import ROUND_COUNT
+from brain_games.consts import ROUND_COUNTS
 
 
-def play(launch, description):
+def start_game(get_answer, description):
     print('Welcome to thee Brain Games!')
     name = prompt.string('May i have your name? ')
     print(f"Hello, {name}!\n{description}")
-    for _ in range(ROUND_COUNT):
-        question, correct_answer = launch()
+    for _ in range(ROUND_COUNTS):
+        question, correct_answer = get_answer()
         user_answer = prompt.string(f'Question: {question}\nYour answer: ')
         if user_answer == correct_answer:
             print('Correct!')

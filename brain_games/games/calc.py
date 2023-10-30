@@ -1,20 +1,23 @@
 import random
-from brain_games.engine import play
+from brain_games.engine import start_game
 from brain_games.consts import DESCRIPTION_CALC
+from brain_games.utils import generate_random_numbers
 
 
 def perform_math_operation(num1, num2, operator):
-    if operator == '+':
-        return num1 + num2
-    elif operator == '-':
-        return num1 - num2
-    else:
-        return num1 * num2
+    match operator:
+        case '+':
+            return num1 + num2
+        case '-':
+            return num1 - num2
+        case '*':
+            return num1 * num2
+        case _:
+            raise ValueError('Unsupported operator')
 
 
-def result_calc_game():
-    num1 = random.randint(1, 20)
-    num2 = random.randint(1, 20)
+def answer_calc_game():
+    num1, num2 = generate_random_numbers()
     operator = random.choice(['+', '-', '*'])
 
     question = f"Question: {num1} {operator} {num2}"
@@ -24,4 +27,4 @@ def result_calc_game():
 
 
 def start_calc_game():
-    play(result_calc_game, DESCRIPTION_CALC)
+    start_game(answer_calc_game, DESCRIPTION_CALC)

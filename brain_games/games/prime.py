@@ -1,6 +1,6 @@
-import random
-from brain_games.engine import play
+from brain_games.engine import start_game
 from brain_games.consts import DESCRIPTION_PRIME
+from brain_games.utils import ganerate_random_number
 
 
 def is_prime(number):
@@ -13,11 +13,11 @@ def is_prime(number):
 
 
 def result_prime_game():
-    number = random.randint(1, 10)
+    number = ganerate_random_number()
     question = number
     correct_answer = is_prime(number) and 'yes' or 'no'
     return question, str(correct_answer)
 
 
 def start_prime_game():
-    play(result_prime_game, DESCRIPTION_PRIME)
+    start_game(result_prime_game, DESCRIPTION_PRIME)

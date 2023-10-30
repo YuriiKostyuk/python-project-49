@@ -1,6 +1,6 @@
-import random
-from brain_games.engine import play
+from brain_games.engine import start_game
 from brain_games.consts import DESCRIPTION_GCD
+from brain_games.utils import generate_random_numbers
 
 
 def euclidean_algorithm(num1, num2):
@@ -10,12 +10,11 @@ def euclidean_algorithm(num1, num2):
 
 
 def result_gcd_game():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
+    num1, num2 = generate_random_numbers()
     question = f"Question: {num1} {num2}"
     correct_answer = euclidean_algorithm(num1, num2)
     return question, str(correct_answer)
 
 
 def start_gcd_game():
-    play(result_gcd_game, DESCRIPTION_GCD)
+    start_game(result_gcd_game, DESCRIPTION_GCD)

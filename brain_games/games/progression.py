@@ -1,5 +1,5 @@
 import random
-from brain_games.engine import play
+from brain_games.engine import start_game
 from brain_games.consts import DESCRIPTION_PROGRESSION
 
 
@@ -16,4 +16,4 @@ def result_progression_game():
 
 
 def start_progression_game():
-    play(result_progression_game, DESCRIPTION_PROGRESSION)
+    start_game(result_progression_game, DESCRIPTION_PROGRESSION)
