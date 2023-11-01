@@ -8,4 +8,7 @@ DESCRIPTION_PRIME = (
 DESCRIPTION_PROGRESSION = 'What number is missing in the progression?'
 
 
-ROUND_COUNTS = 3
+NUMBER_OF_ROUNDS = 3
+
+
+MATH_OPERATORS = ["+", "-", "*"]

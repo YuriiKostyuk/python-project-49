@@ -1,13 +1,12 @@
 import prompt
-from brain_games.consts import ROUND_COUNTS
+from brain_games.consts import NUMBER_OF_ROUNDS
 
 
-def start_game(get_answer, description):
-    print('Welcome to thee Brain Games!')
-    name = prompt.string('May i have your name? ')
+def start_game(game_result, description):
+    name = prompt.string('Welcome to the Brain Games!\nMay I have your name? ')
     print(f"Hello, {name}!\n{description}")
-    for _ in range(ROUND_COUNTS):
-        question, correct_answer = get_answer()
+    for _ in range(NUMBER_OF_ROUNDS):
+        question, correct_answer = game_result()
         user_answer = prompt.string(f'Question: {question}\nYour answer: ')
         if user_answer == correct_answer:
             print('Correct!')
