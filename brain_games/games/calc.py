@@ -16,7 +16,7 @@ def get_math_result_by_sign(num1, num2, operator):
             raise ValueError('Unsupported operator')
 
 
-def get_answer_calc_game():
+def get_data_for_calc_game():
     num1, num2 = get_rand_num(), get_rand_num()
     operator = random.choice(MATH_OPERATORS)
 
@@ -27,4 +27,4 @@ def get_answer_calc_game():
 
 
 def start_calc_game():
-    start_game(get_answer_calc_game, DESCRIPTION_CALC)
+    start_game(get_data_for_calc_game, DESCRIPTION_CALC)

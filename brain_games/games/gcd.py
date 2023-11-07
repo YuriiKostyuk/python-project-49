@@ -9,7 +9,7 @@ def euclidean_algorithm(num1, num2):
     return num1 + num2
 
 
-def get_result_gcd_game():
+def get_data_for_gcd_game():
     num1, num2 = get_rand_num(), get_rand_num()
     question = f"Question: {num1} {num2}"
     correct_answer = euclidean_algorithm(num1, num2)
@@ -17,4 +17,4 @@ def get_result_gcd_game():
 
 
 def start_gcd_game():
-    start_game(get_result_gcd_game, DESCRIPTION_GCD)
+    start_game(get_data_for_gcd_game, DESCRIPTION_GCD)
