@@ -11,4 +11,4 @@ DESCRIPTION_PROGRESSION = 'What number is missing in the progression?'
 NUMBER_OF_ROUNDS = 3
 
 
-MATH_OPERATORS = ["+", "-", "*"]
+MATH_OPERATOR = ["+", "-", "*"]
