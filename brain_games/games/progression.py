@@ -17,7 +17,7 @@ def hide_progression_value(progression, index):
     return progression, str(hidden_value)
 
 
-def get_question_and_result_progression_game():
+def get_question_and_result_progres_game():
     progression, start, step = generate_progression()
     hidden_index = random.randint(0, len(progression) - 1)
     progression_with_hidden_value, result = (
@@ -27,4 +27,4 @@ def get_question_and_result_progression_game():
 
 
 def start_progression_game():
-    start_game(get_question_and_result_progression_game, DESCRIPTION_PROGRESSION)
+    start_game(get_question_and_result_progres_game, DESCRIPTION_PROGRESSION)
