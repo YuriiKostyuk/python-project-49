@@ -4,8 +4,8 @@ from brain_games.consts import DESCRIPTION_CALC, MATH_OPERATORS
 from brain_games.utils import get_rand_num
 
 
-def get_math_result_by_sign(num1, num2, sign):
-    match sign:
+def get_result_by_math_sign(num1, num2, math_sign):
+    match math_sign:
         case '+':
             return num1 + num2
         case '-':
@@ -18,10 +18,10 @@ def get_math_result_by_sign(num1, num2, sign):
 
 def get_math_expression_and_result():
     num1, num2 = get_rand_num(), get_rand_num()
-    sign = random.choice(MATH_OPERATORS)
+    math_sign = random.choice(MATH_OPERATORS)
 
-    math_expression = f"{num1} {sign} {num2}"
-    result = get_math_result_by_sign(num1, num2, sign)
+    math_expression = f"{num1} {math_sign} {num2}"
+    result = get_result_by_math_sign(num1, num2, math_sign)
 
     return math_expression, str(result)
 
