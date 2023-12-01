@@ -1,6 +1,6 @@
 import random
 from brain_games.engine import start_game
-from brain_games.consts import DESCRIPTION_CALC, MATH_OPERATORS
+from brain_games.consts import DESCRIPTION_CALC, MATH_SIGNS
 from brain_games.utils import get_rand_num
 
 
@@ -18,7 +18,7 @@ def get_result_by_math_sign(num1, num2, math_sign):
 
 def get_math_expression_and_result():
     num1, num2 = get_rand_num(), get_rand_num()
-    math_sign = random.choice(MATH_OPERATORS)
+    math_sign = random.choice(MATH_SIGNS)
 
     math_expression = f"{num1} {math_sign} {num2}"
     result = get_result_by_math_sign(num1, num2, math_sign)
