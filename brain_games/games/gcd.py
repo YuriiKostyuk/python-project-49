@@ -8,12 +8,12 @@ def get_gcd(num1, num2):
     return math.gcd(num1, num2)
 
 
-def get_a_pair_of_number_and_gcd():
+def get_nums_pair_and_gcd():
     num1, num2 = get_rand_num(), get_rand_num()
-    pair_of_numbers = f"{num1} {num2}"
+    nums_pair = f"{num1} {num2}"
     gcd = get_gcd(num1, num2)
-    return pair_of_numbers, str(gcd)
+    return nums_pair, str(gcd)
 
 
 def start_gcd_game():
-    start_game(get_a_pair_of_number_and_gcd, DESCRIPTION_GCD)
+    start_game(get_nums_pair_and_gcd, DESCRIPTION_GCD)

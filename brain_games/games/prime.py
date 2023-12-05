@@ -12,11 +12,11 @@ def is_prime(number):
     return True
 
 
-def get_problem_num_and_prime_result():
+def get_problem_num_and_prime_answer():
     number = get_rand_num()
-    result = 'yes' if is_prime(number) else 'no'
-    return number, result
+    answer = 'yes' if is_prime(number) else 'no'
+    return number, answer
 
 
 def start_prime_game():
-    start_game(get_problem_num_and_prime_result, DESCRIPTION_PRIME)
+    start_game(get_problem_num_and_prime_answer, DESCRIPTION_PRIME)

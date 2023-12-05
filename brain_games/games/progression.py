@@ -6,8 +6,7 @@ from brain_games.consts import PROGRESSION_LENGHT
 
 
 def generate_progression(start, step, length):
-    progression = [start + step * i for i in range(length)]
-    return progression
+    return [start + step * i for i in range(length)]
 
 
 def hide_progression_value(progression, index):
@@ -16,7 +15,7 @@ def hide_progression_value(progression, index):
     return progression, str(hidden_value)
 
 
-def get_question_and_result_progres_game():
+def get_question_and_result():
     start, step = get_rand_num(), get_rand_num()
 
     progression = generate_progression(start, step, PROGRESSION_LENGHT)
@@ -30,4 +29,4 @@ def get_question_and_result_progres_game():
 
 
 def start_progression_game():
-    start_game(get_question_and_result_progres_game, DESCRIPTION_PROGRESSION)
+    start_game(get_question_and_result, DESCRIPTION_PROGRESSION)
